@@ -16,4 +16,4 @@ async def wait_random(max_delay: int = 10) -> Union[float, None]:
     """
     delay = random.uniform(0, max_delay)
     await asyncio.sleep(delay)
-    return delay
+    return delay if max_delay > 0 else None
