@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 """
 This module contains a new wait_n(0) function that calls task_wait_random(3)
