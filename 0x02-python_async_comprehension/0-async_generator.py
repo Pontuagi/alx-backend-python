@@ -7,17 +7,18 @@ numbers after an asynchronous delay.
 
 import asyncio
 import random
+from typing import AsyncGenerator
 
 
-async def async_generator():
+async def async_generator() -> AsyncGenerator[float, None]:
     """
      Asynchronously generates random numbers after a delay.
 
     Yields:
         int: Random integers between 0 and 10.
 
-    This generator asynchronously yields random integers between 0 and 10,
-    waiting for 1 second between each value.
+    This generator asynchronously yields random floating-point numbers
+    between 0 and 10, waiting for 1 second between each value.
     The generator loops 10 times before completion.
     """
     for _ in range(10):
