@@ -5,10 +5,11 @@ This module contains a function that returns a asyncion task
 """
 
 import asyncio
+from typing import Coroutine
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-def task_wait_random(max_delay):
+def task_wait_random(max_delay: int) -> asyncio.Task[float]:
     """
     Create an asyncio.Task for wait_random with the specified max_delay.
 
