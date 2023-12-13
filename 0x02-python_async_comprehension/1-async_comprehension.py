@@ -17,6 +17,4 @@ async def async_comprehension() -> List[float]:
     Returns:
         list: List containing 10 random numbers generated asynchronously.
     """
-    async_gen = async_generator()
-    random_numbers: List[float] = [number async for number in async_gen]
-    return random_numbers
+    return [number async for number in async_generator()]
