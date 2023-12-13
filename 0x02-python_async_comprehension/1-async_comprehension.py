@@ -6,7 +6,6 @@ and uses in a coroutine called async_comprehensions
 """
 
 from typing import List
-import asyncio
 async_generator = __import__('0-async_generator').async_generator
 
 
@@ -19,5 +18,5 @@ async def async_comprehension() -> List[float]:
         list: List containing 10 random numbers generated asynchronously.
     """
     async_gen = async_generator()
-    random_numbers: List[float] = [number async for number in async_gen][:10]
+    random_numbers: List[float] = [number async for number in async_gen]
     return random_numbers
